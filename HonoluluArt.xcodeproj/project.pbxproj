@@ -12,6 +12,10 @@
 		5934DF491F0508C1005FD752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5934DF471F0508C1005FD752 /* Main.storyboard */; };
 		5934DF4B1F0508C1005FD752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5934DF4A1F0508C1005FD752 /* Assets.xcassets */; };
 		5934DF4E1F0508C1005FD752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5934DF4C1F0508C1005FD752 /* LaunchScreen.storyboard */; };
+		5934DF571F051000005FD752 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 5934DF561F051000005FD752 /* PublicArt.json */; };
+		5934DF591F0510C5005FD752 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934DF581F0510C5005FD752 /* Artwork.swift */; };
+		5934DF5B1F0517E2005FD752 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934DF5A1F0517E2005FD752 /* VCMapView.swift */; };
+		5934DF5D1F0532E4005FD752 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934DF5C1F0532E4005FD752 /* JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		5934DF4A1F0508C1005FD752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5934DF4D1F0508C1005FD752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5934DF4F1F0508C1005FD752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5934DF561F051000005FD752 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
+		5934DF581F0510C5005FD752 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		5934DF5A1F0517E2005FD752 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		5934DF5C1F0532E4005FD752 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		5934DF421F0508C1005FD752 /* HonoluluArt */ = {
 			isa = PBXGroup;
 			children = (
+				5934DF551F050FD8005FD752 /* Supporting Files */,
 				5934DF431F0508C1005FD752 /* AppDelegate.swift */,
 				5934DF451F0508C1005FD752 /* ViewController.swift */,
 				5934DF471F0508C1005FD752 /* Main.storyboard */,
 				5934DF4A1F0508C1005FD752 /* Assets.xcassets */,
 				5934DF4C1F0508C1005FD752 /* LaunchScreen.storyboard */,
 				5934DF4F1F0508C1005FD752 /* Info.plist */,
+				5934DF581F0510C5005FD752 /* Artwork.swift */,
+				5934DF5C1F0532E4005FD752 /* JSON.swift */,
+				5934DF5A1F0517E2005FD752 /* VCMapView.swift */,
 			);
 			path = HonoluluArt;
+			sourceTree = "<group>";
+		};
+		5934DF551F050FD8005FD752 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5934DF561F051000005FD752 /* PublicArt.json */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5934DF571F051000005FD752 /* PublicArt.json in Resources */,
 				5934DF4E1F0508C1005FD752 /* LaunchScreen.storyboard in Resources */,
 				5934DF4B1F0508C1005FD752 /* Assets.xcassets in Resources */,
 				5934DF491F0508C1005FD752 /* Main.storyboard in Resources */,
@@ -137,7 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5934DF5B1F0517E2005FD752 /* VCMapView.swift in Sources */,
+				5934DF5D1F0532E4005FD752 /* JSON.swift in Sources */,
 				5934DF461F0508C1005FD752 /* ViewController.swift in Sources */,
+				5934DF591F0510C5005FD752 /* Artwork.swift in Sources */,
 				5934DF441F0508C1005FD752 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +324,7 @@
 				5934DF541F0508C1005FD752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
