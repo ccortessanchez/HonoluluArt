@@ -68,7 +68,6 @@
 				5934DF471F0508C1005FD752 /* Main.storyboard */,
 				5934DF4A1F0508C1005FD752 /* Assets.xcassets */,
 				5934DF4C1F0508C1005FD752 /* LaunchScreen.storyboard */,
-				5934DF4F1F0508C1005FD752 /* Info.plist */,
 				5934DF581F0510C5005FD752 /* Artwork.swift */,
 				5934DF5C1F0532E4005FD752 /* JSON.swift */,
 				5934DF5A1F0517E2005FD752 /* VCMapView.swift */,
@@ -80,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				5934DF561F051000005FD752 /* PublicArt.json */,
+				5934DF4F1F0508C1005FD752 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     let regionRadius: CLLocationDistance = 1000
     var artworks = [Artwork]()
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,5 +60,19 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func checkLocationAutorizathionStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            mapView.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkLocationAutorizathionStatus()
+    }
+    
 }
 
