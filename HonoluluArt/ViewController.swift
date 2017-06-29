@@ -22,8 +22,8 @@ class ViewController: UIViewController {
         let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
         centerMapOnLocation(location: initialLocation)
         loadInitialData()
-        mapView.delegate = self
         mapView.addAnnotations(artworks)
+        mapView.delegate = self
         //let artwork = Artwork(title: "King David Kalakua", locationName: "Waikiki Gateway Park", discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
         //mapView.addAnnotation(artwork)
     }
@@ -34,26 +34,26 @@ class ViewController: UIViewController {
     }
     
     func loadInitialData() {
-        let fileName = Bundle.main.path(forResource: "publicArt", ofType: "json")
+        let fileName = Bundle.main.path(forResource: "PublicArt", ofType: "json");
         var data: Data?
         do {
             data = try Data(contentsOf: URL(fileURLWithPath: fileName!), options: NSData.ReadingOptions(rawValue: 0))
         } catch _ {
             data = nil
         }
-    
         var jsonObject: Any? = nil
         if let data = data {
             do {
-                jsonObject = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions(rawValue: 0))
+                jsonObject = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0))
             } catch _ {
                 jsonObject = nil
             }
         }
-        
-        if let jsonObject = jsonObject as? [String:Any], let jsonData = JSONValue.fromObject(jsonObject)?["data"]?.array {
+        if let jsonObject = jsonObject as? [String: Any],
+            let jsonData = JSONValue.fromObject(jsonObject)?["data"]?.array {
             for artworkJSON in jsonData {
-                if let artworkJSON = artworkJSON.array, let artwork = Artwork.fromJSON(json: artworkJSON) {
+                if let artworkJSON = artworkJSON.array,
+                    let artwork = Artwork.fromJSON(artworkJSON) {
                     artworks.append(artwork)
                 }
             }

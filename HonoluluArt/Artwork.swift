@@ -25,7 +25,7 @@ class Artwork: NSObject, MKAnnotation {
         super.init()
     }
     
-    class func fromJSON(json: [JSONValue]) -> Artwork? {
+    class func fromJSON(_ json: [JSONValue]) -> Artwork? {
         var title: String
         if let titleOrNil = json[16].string {
             title = titleOrNil
